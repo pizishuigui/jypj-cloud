@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jypj-admin" />
+        <module name="jypj-gateway" />
+        <module name="jypj-achivements" />
+        <module name="jypj-model" />
+        <module name="jypj-apis" />
+        <module name="jypj-common" />
+        <module name="jypj-utils" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jypj-achivements" options="-parameters" />
+      <module name="jypj-admin" options="-parameters" />
+      <module name="jypj-apis" options="-parameters" />
+      <module name="jypj-cloud" options="-parameters" />
+      <module name="jypj-common" options="-parameters" />
+      <module name="jypj-gateway" options="-parameters" />
+      <module name="jypj-model" options="-parameters" />
+      <module name="jypj-utils" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+# Project exclude paths
+/jypj-achivements/target/
+/jypj-admin/target/
+/jypj-gateway/target/
