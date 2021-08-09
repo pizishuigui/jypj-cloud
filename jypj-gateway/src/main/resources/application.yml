@@ -12,8 +12,8 @@ knife4j:
       - name: 后台管理服务
         serviceName: jypj-admin
         location: /v2/api-docs?group=default
-        servicePath: /yuwendeng
+        servicePath: /admin
       - name: 绩效考评系统服务
         serviceName: jypj-achievement
         location: /v2/api-docs?group=default
-        servicePath: /piziwang
+        servicePath: /achievement

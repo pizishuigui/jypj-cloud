@@ -25,7 +25,7 @@ import java.util.List;
 @Import(BeanValidatorPluginsConfiguration.class)
 public class SwaggerConfiguration {
 
-    @Bean(value = "orderApi")
+    @Bean(value = "achievementsApi")
     @Order(value = 1)
     public Docket groupRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -39,10 +39,10 @@ public class SwaggerConfiguration {
 
     private ApiInfo groupApiInfo(){
         return new ApiInfoBuilder()
-                .title("swagger-bootstrap-ui很棒~~~！！！")
-                .description("<div style='font-size:14px;color:red;'>swagger-bootstrap-ui-demo RESTful APIs</div>")
+                .title("积分考评系统api文档")
+                .description("<div style='font-size:14px;color:red;'>积分考评系统 APIs</div>")
                 .termsOfServiceUrl("http://www.group.com/")
-                .contact("group@qq.com")
+                .contact("1712841217@qq.com")
                 .version("1.0")
                 .build();
     }

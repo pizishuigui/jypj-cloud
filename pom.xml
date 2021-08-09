@@ -35,6 +35,12 @@
         <!--Swagger Resources-->
         <knife4j.version>2.0.6</knife4j.version>
         <swagger.version>1.5.21</swagger.version>
+        <lombok.version>1.18.8</lombok.version>
+        <mysql.version>5.1.46</mysql.version>
+
+        <mybatis.plus.version>3.1.1</mybatis.plus.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <fastjson.dataformat.version>2.9.9</fastjson.dataformat.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -46,7 +52,6 @@
                 <scope>import</scope>
             </dependency>
 
-
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-micro-spring-boot-starter</artifactId>
@@ -56,6 +61,36 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
+            </dependency>
+          <!--mybatis-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <!-- Mysql 数据库 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-cbor</artifactId>
+                <version>${fastjson.dataformat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${fastjson.dataformat.version}</version>
             </dependency>
 
         </dependencies>
@@ -67,6 +102,20 @@
             <artifactId>swagger-models</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <!--日志处理包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>

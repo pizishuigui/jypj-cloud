@@ -22,13 +22,13 @@ import java.util.List;
  * @author <a href="mailto:xiaoymin@foxmail.com">xiaoymin@foxmail.com</a> 
  * 2019/05/04 11:26
  */
-@Api(tags = "订单模块")
+@Api(tags = "绩效模块")
 @RestController
-@RequestMapping("/order")
-public class OrderController {
+@RequestMapping("/achievement")
+public class AchievementController {
 
 
-    @ApiOperation(value = "查询订单列表")
+    @ApiOperation(value = "查询绩效列表")
     @PostMapping(value = "/list")
     public Rest<List<Order>> list(){
         Rest<List<Order>> rest=new Rest<>();
@@ -37,7 +37,7 @@ public class OrderController {
         return rest;
     }
 
-    @ApiOperation(value = "根据订单id查询订单详情")
+    @ApiOperation(value = "根据老师id查询绩效详情")
     @GetMapping("/queryById")
     public Rest<Order> queryById(@RequestParam(value = "id") String id){
         Rest<Order> userRest=new Rest<>();
