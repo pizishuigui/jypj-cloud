@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: service-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: jypj-admin
+          uri: lb://jypj-admin
+          predicates:
+            - Path=/admin/**
+          filters:
+            - StripPrefix=1
+
 knife4j:
   enableAggregation: true
   nacos:

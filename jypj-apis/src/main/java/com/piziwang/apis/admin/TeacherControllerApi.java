@@ -1,12 +1,11 @@
 package com.piziwang.apis.admin;
 
-import com.piziwang.model.admin.dtos.TeacherDto;
+import com.piziwang.model.admin.dtos.ExcelImportRresponseDto;
+import com.piziwang.model.admin.dtos.TeacherInsertDto;
 import com.piziwang.model.admin.dtos.TeacherQueryDto;
 import com.piziwang.model.admin.dtos.TeacherUpdateDto;
-import com.piziwang.model.admin.pojo.AdTeacher;
 import com.piziwang.model.common.dtos.ResponseResult;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import org.springframework.web.multipart.MultipartFile;
 
 
 public interface TeacherControllerApi {
@@ -21,10 +20,10 @@ public interface TeacherControllerApi {
 
     /**
      * 新增
-     * @param adTeacher
+     * @param teacherInsertDto
      * @return
      */
-    public ResponseResult save(AdTeacher adTeacher);
+    public ResponseResult save(TeacherInsertDto teacherInsertDto);
 
     /**
      * 修改
@@ -39,4 +38,8 @@ public interface TeacherControllerApi {
      * @return
      */
     public ResponseResult deleteById(Integer id);
+
+
+    public ExcelImportRresponseDto excelImport(MultipartFile file);
+
 }

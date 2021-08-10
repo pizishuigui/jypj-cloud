@@ -1,16 +1,15 @@
 package com.piziwang.admin.controller;
 
 import com.piziwang.apis.admin.StudentControllerApi;
+import com.piziwang.model.admin.dtos.ExcelImportRresponseDto;
 import com.piziwang.model.admin.dtos.StudengUpdateDto;
 import com.piziwang.model.admin.dtos.StudentQueryDto;
 import com.piziwang.model.admin.pojo.AdStudent;
 import com.piziwang.model.common.dtos.ResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @Api(tags = "学生管理模块")
 @RestController
@@ -41,6 +40,13 @@ public class AdStudentController implements StudentControllerApi {
     @ApiOperation("根据id删除学生")
     @GetMapping("/deleteById")
     public ResponseResult deleteById(Integer id) {
+        return null;
+    }
+
+    @Override
+    @ApiOperation("批量导入学生信息")
+    @PostMapping("/excelImport")
+    public ExcelImportRresponseDto excelImport(@RequestParam(value="excelFile") MultipartFile file) {
         return null;
     }
 }

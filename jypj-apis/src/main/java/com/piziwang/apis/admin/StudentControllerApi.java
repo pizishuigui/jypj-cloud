@@ -1,11 +1,12 @@
 package com.piziwang.apis.admin;
 
 
+import com.piziwang.model.admin.dtos.ExcelImportRresponseDto;
 import com.piziwang.model.admin.dtos.StudengUpdateDto;
 import com.piziwang.model.admin.dtos.StudentQueryDto;
 import com.piziwang.model.admin.pojo.AdStudent;
 import com.piziwang.model.common.dtos.ResponseResult;
-
+import org.springframework.web.multipart.MultipartFile;
 
 
 public interface StudentControllerApi  {
@@ -38,4 +39,11 @@ public interface StudentControllerApi  {
      * @return
      */
     public ResponseResult deleteById(Integer id);
+
+    /**
+     * 批量导入学生名单
+     * @param file
+     * @return
+     */
+    public ExcelImportRresponseDto excelImport(MultipartFile file);
 }

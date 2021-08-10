@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jypj-auth" />
         <module name="jypj-apis" />
         <module name="jypj-gateway" />
         <module name="jypj-achivements" />
@@ -22,6 +23,7 @@
       <module name="jypj-achivements" options="-parameters" />
       <module name="jypj-admin" options="-parameters" />
       <module name="jypj-apis" options="-parameters" />
+      <module name="jypj-auth" options="-parameters" />
       <module name="jypj-cloud" options="-parameters" />
       <module name="jypj-common" options="-parameters" />
       <module name="jypj-gateway" options="-parameters" />
